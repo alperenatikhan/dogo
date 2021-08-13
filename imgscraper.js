@@ -34,11 +34,13 @@ location = location.slice(0,location.indexOf("wczoraj"))
   browser.close();
 }
 
+
+//While I experiment with speed and memory issues, the puppeteer with my internet connection often gave errors after scraping 7 pages in each cities or regions. 
+
 async function scraper(){
 
-      for(let xyz=6; xyz<7; xyz++){
-              await run(xyz);
-}
+      let xyz=6;
+      await run(xyz);
 
 fs.writeFile ("db6.json", JSON.stringify(offer_photos), function(err) {
     if (err) throw err;
